@@ -17,7 +17,24 @@
 |![ubuntu](https://dl.dropboxusercontent.com/u/60521097/ubuntu_orange_hex.png)|[PPA](https://launchpad.net/~numix/+archive/ubuntu/ppa)|
 
 
-## Build It
+## Build the debian .deb
+
+clone the repo, which was retrieved by running `apt-src install numix-gtk-theme
+`
+
+then run `sudo apt-get build-dep numix-gtk-theme`
+
+make any modifications, then run `dpkg-source --commit` from the main directory
+
+to build the .deb, run `dpkg-buildpackage -us -uc` 
+
+going up one directory, you should find the .deb which can be installed by running 
+`dpkg -i numix-gtk-theme_2.6.6-1_all.deb`
+
+
+
+
+## Build It in general
 
 First, you need to compile the theme using the [Sass](http://sass-lang.com/) compiler.
 
